@@ -342,8 +342,9 @@
     .nav { padding-top: 18px; padding-bottom: 18px; flex-wrap: wrap; gap: 12px; }
     .nav-links { gap: 20px; flex-wrap: wrap; }
     .credential-line { flex-wrap: wrap; }
+    .dropdown-label { cursor: pointer; }
     .dropdown-menu {
-      display: block;
+      display: none;
       position: static;
       background: transparent;
       border: none;
@@ -351,7 +352,13 @@
       padding: 4px 0 0 0;
       min-width: 0;
     }
+    .dropdown.open .dropdown-menu { display: block; }
     .dropdown-menu span { padding: 3px 0; font-size: 11px; }
+    .dropdown-label::after {
+      content: " ▾";
+      font-size: 9px;
+    }
+    .dropdown.open .dropdown-label::after { content: " ▴"; }
   }
 
   @media (max-width: 560px) {
@@ -457,6 +464,12 @@
     <span>amureconsulting@gmail.com</span>
   </div>
 </div>
+
+<script>
+  document.querySelector('.dropdown-label').addEventListener('click', function() {
+    this.parentElement.classList.toggle('open');
+  });
+</script>
 
 </body>
 </html>
