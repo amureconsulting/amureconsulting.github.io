@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amure Consulting — Landing Page Reference (Editorial Concept)</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
@@ -330,11 +331,49 @@
   }
 
   @media (max-width: 860px) {
-    .nav, .hero, .services, .offer-wrap, .footer { padding-left: 32px; padding-right: 32px; }
-    .services { grid-template-columns: 1fr 1fr; row-gap: 40px; }
+    .nav, .hero, .services, .offer-wrap, .footer, .approach { padding-left: 28px; padding-right: 28px; }
+    .services { grid-template-columns: 1fr 1fr; row-gap: 32px; column-gap: 20px; }
     .service-col { border-left: none; padding-left: 0; }
-    .offer { grid-template-columns: 1fr; }
+    .offer { grid-template-columns: 1fr; padding: 32px 24px; gap: 24px; }
+    .offer .cta { width: 100%; justify-content: center; }
     .footer { flex-direction: column; gap: 10px; align-items: flex-start; }
+    .hero h1 { font-size: 32px; max-width: 100%; }
+    .hero .subhead { max-width: 100%; }
+    .nav { padding-top: 18px; padding-bottom: 18px; flex-wrap: wrap; gap: 12px; }
+    .nav-links { gap: 20px; flex-wrap: wrap; }
+    .credential-line { flex-wrap: wrap; }
+    .dropdown-menu {
+      display: block;
+      position: static;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 4px 0 0 0;
+      min-width: 0;
+    }
+    .dropdown-menu span { padding: 3px 0; font-size: 11px; }
+  }
+
+  @media (max-width: 560px) {
+    .nav, .hero, .services, .offer-wrap, .footer, .approach { padding-left: 20px; padding-right: 20px; }
+    .hero { padding-top: 16px; padding-bottom: 56px; }
+    .tick-label { font-size: 10px; gap: 6px; }
+    .hero h1 { font-size: 26px; line-height: 1.28; margin-bottom: 16px; }
+    .hero .subhead { font-size: 14.5px; margin-bottom: 28px; }
+    .credential-line { padding-top: 20px; gap: 12px; }
+    .credential-line p { font-size: 12px; }
+    .wordmark { font-size: 16px; }
+    .nav-icon { height: 24px; }
+    .nav-links { font-size: 12px; gap: 14px; }
+    .services { grid-template-columns: 1fr; row-gap: 28px; }
+    .approach h2 { font-size: 21px; }
+    .approach p { font-size: 13.5px; }
+    .offer h2 { font-size: 21px; }
+    .offer p { font-size: 13px; max-width: 100%; }
+    .offer .price { font-size: 20px; }
+    .cta { font-size: 12.5px; padding: 14px 20px; }
+    .services { padding-top: 48px; padding-bottom: 48px; }
+    .offer-wrap { padding-bottom: 56px; }
   }
 </style>
 </head>
